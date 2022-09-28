@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* font-family: 'Poppins', sans-serif; */
+
+/* 
+TODO:
+   -add basic styles to the components
+   -add light/dark theme and switch
+   -linear-gradients, box-shadows, etc. etc.
+   -responiveness
+   -animate the section icons, they're svg so you should be able to do that, also it's a good exercise
+   -add some custor hover effects, but don't go overkill
+*/
+
+/* CSS reset */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* body */
+body {
+	min-height: 100vh;
+	padding: 5rem 5vh;
+}
+
+header {
+	text-align: center;
+}
