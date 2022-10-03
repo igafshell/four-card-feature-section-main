@@ -1,0 +1,85 @@
+/* ~~Animations~~ */
+main section:nth-child(2) img {
+	transition: 300ms ease all;
+}
+
+main section:nth-child(2) img:hover {
+	transform: scale(1.2);
+}
+
+main section:nth-child(2) img {
+	transition: 300ms ease all;
+}
+
+main section:nth-child(2) img:hover {
+	transform: scale(1.2);
+}
+
+main section:nth-child(3) img:hover {
+	animation: img3-hover 300ms linear infinite;
+}
+
+/* 4th */
+:root {
+	--linear1: #2c27b1;
+	--linear2: #9959d2;
+}
+
+/* 
+#377FD2
+#549EF2
+*/
+svg main section:nth-child(4) svg {
+	transition: 300ms ease all;
+	cursor: pointer;
+}
+
+main section:nth-child(4) svg:hover {
+	transform: scale(1.2);
+}
+
+@keyframes img3-hover {
+	25% {
+		transform: rotate(5deg);
+		-moz-transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+	}
+
+	75% {
+		transform: rotate(-5deg);
+		-moz-transform: rotate(-5deg);
+		-webkit-transform: rotate(-5deg);
+	}
+}
+
+@-webkit-keyframes img3-hover {
+	25% {
+		transform: rotate(5deg);
+		-moz-transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+	}
+
+	75% {
+		transform: rotate(-5deg);
+		-moz-transform: rotate(-5deg);
+		-webkit-transform: rotate(-5deg);
+	}
+}
+@-moz-keyframes img3-hover {
+	25% {
+		transform: rotate(5deg);
+		-moz-transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+	}
+
+	75% {
+		transform: rotate(-5deg);
+		-moz-transform: rotate(-5deg);
+		-webkit-transform: rotate(-5deg);
+	}
+}
+
+@keyframes img4-hover {
+	to {
+	}
+}
