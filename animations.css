@@ -1,41 +1,97 @@
 /* ~~Animations~~ */
-main section:nth-child(2) img {
-	transition: 300ms ease all;
-}
 
-main section:nth-child(2) img:hover {
-	transform: scale(1.2);
-}
-
-main section:nth-child(2) img {
-	transition: 300ms ease all;
-}
-
-main section:nth-child(2) img:hover {
-	transform: scale(1.2);
-}
-
-main section:nth-child(3) img:hover {
-	animation: img3-hover 300ms linear infinite;
-}
-
-/* 4th */
+/* ~~~ I card ~~~ */
 :root {
-	--linear1: #2c27b1;
-	--linear2: #9959d2;
+	--anim-distance-sclera: 2px;
+	--anim-distance-iris: 10px;
+	--anim-distance-pupil: 11px;
+	--anim-duration: 1.3s;
+	--anim-timing: ease;
 }
 
-/* 
-#377FD2
-#549EF2
-*/
-svg main section:nth-child(4) svg {
-	transition: 300ms ease all;
-	cursor: pointer;
-}
-
-main section:nth-child(4) svg:hover {
+main section:nth-child(1):hover svg {
 	transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	main section:nth-child(1) svg {
+		transition: 300ms ease all;
+	}
+	main section:nth-child(1):hover #sclera {
+		animation: img1-hover-sclera var(--anim-duration) var(--anim-timing) 1;
+	}
+	main section:nth-child(1):hover #iris {
+		animation: img1-hover-iris var(--anim-duration) var(--anim-timing) 1;
+	}
+	main section:nth-child(1):hover #pupil {
+		animation: img1-hover-pupil var(--anim-duration) var(--anim-timing) 1;
+	}
+}
+
+@keyframes img1-hover-sclera {
+	25% {
+		transform: translateX(var(--anim-distance-sclera));
+	}
+
+	75% {
+		transform: translateX(calc(-1 * var(--anim-distance-sclera)));
+	}
+}
+
+@keyframes img1-hover-iris {
+	25% {
+		transform: translateX(var(--anim-distance-iris));
+	}
+
+	75% {
+		transform: translateX(calc(-1 * var(--anim-distance-iris)));
+	}
+}
+
+@keyframes img1-hover-pupil {
+	25% {
+		transform: translateX(var(--anim-distance-pupil));
+	}
+
+	75% {
+		transform: translateX(calc(-1 * var(--anim-distance-pupil)));
+	}
+}
+
+/* ~~~ II card ~~~ */
+@media (prefers-reduced-motion: no-preference) {
+	main section:nth-child(2) #dots *,
+	main section:nth-child(2) svg,
+	main section:nth-child(2) #background {
+		transition: 300ms ease all;
+	}
+}
+
+main section:nth-child(2):hover #dots * {
+	fill: #e73d46;
+}
+
+main section:nth-child(2) svg {
+	transform-origin: center;
+}
+
+main section:nth-child(2):hover svg {
+	transform: scale(1.1);
+}
+
+main section:nth-child(2) #background {
+	transform-origin: center;
+}
+
+main section:nth-child(2):hover #background {
+	transform: scale(0.8);
+}
+
+/* ~~~ III card ~~~ */
+@media (prefers-reduced-motion: no-preference) {
+	main section:nth-child(3):hover svg {
+		animation: img3-hover 300ms linear infinite;
+	}
 }
 
 @keyframes img3-hover {
@@ -52,34 +108,38 @@ main section:nth-child(4) svg:hover {
 	}
 }
 
-@-webkit-keyframes img3-hover {
-	25% {
-		transform: rotate(5deg);
-		-moz-transform: rotate(5deg);
-		-webkit-transform: rotate(5deg);
-	}
+/* ~~~ IV card ~~~ */
 
-	75% {
-		transform: rotate(-5deg);
-		-moz-transform: rotate(-5deg);
-		-webkit-transform: rotate(-5deg);
-	}
-}
-@-moz-keyframes img3-hover {
-	25% {
-		transform: rotate(5deg);
-		-moz-transform: rotate(5deg);
-		-webkit-transform: rotate(5deg);
-	}
-
-	75% {
-		transform: rotate(-5deg);
-		-moz-transform: rotate(-5deg);
-		-webkit-transform: rotate(-5deg);
-	}
+main section:nth-child(4):hover svg {
+	transform: scale(1.2);
 }
 
-@keyframes img4-hover {
-	to {
+#circle {
+	fill: #2a46d5;
+}
+
+#text {
+	fill: #1666de;
+}
+
+main section:nth-child(4):hover #circle {
+	fill: #123592;
+}
+
+main section:nth-child(4):hover #text {
+	fill: #3149c6;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	main section:nth-child(4) svg {
+		transition: 300ms ease all;
+	}
+
+	#circle {
+		transition: 300ms ease fill;
+	}
+
+	#text {
+		transition: 300ms ease fill;
 	}
 }

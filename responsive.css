@@ -1,0 +1,55 @@
+/* ~~~ Media queries ~~~ */
+
+@media (max-width: 340px) {
+	header,
+	main section {
+		font-size: 0.8rem;
+	}
+}
+
+@media (min-width: 450px) {
+	:root {
+		--header-font-size: min(3.5vw, 1.2rem);
+	}
+
+	header p {
+		max-width: var(--header-p-max-width);
+	}
+}
+
+@media (min-width: 1040px) {
+	:root {
+		--header-font-size: min(2vw, 1.5rem);
+		--header-p-max-width: min(70vw, 50rem);
+	}
+
+	header h1,
+	header h2 {
+		font-size: 1.7em;
+	}
+
+	main {
+		display: grid;
+		grid-template-areas:
+			"supervisor teambuilder calculator"
+			"supervisor karma calculator";
+		align-items: center;
+		gap: 2rem;
+	}
+
+	main section {
+		margin: 0;
+	}
+	main section:nth-child(1) {
+		grid-area: supervisor;
+	}
+	main section:nth-child(2) {
+		grid-area: teambuilder;
+	}
+	main section:nth-child(3) {
+		grid-area: karma;
+	}
+	main section:nth-child(4) {
+		grid-area: calculator;
+	}
+}

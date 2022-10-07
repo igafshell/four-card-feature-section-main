@@ -3,10 +3,6 @@
 /* 
 TODO:
 -add light/dark theme and switch
-   -linear-gradients, box-shadows, etc. etc.
-   -responiveness
-   -animate the section icons, they're svg so you should be able to do that, also it's a good exercise
-   -add some custor hover effects, but don't go overkill
    */
 
 /* ~~CSS reset~~ */
@@ -22,30 +18,36 @@ body {
 	padding: 4rem 4vh;
 	font-family: "Poppins", sans-serif;
 	background-color: hsl(0, 0%, 98%);
-
 	display: grid;
 	justify-items: center;
 }
 
 /* ~~Header~~ */
+:root {
+	--header-font-size: 4vw;
+	--header-p-max-width: min(70vw, 35rem);
+}
+
 header {
 	text-align: center;
 	margin-bottom: 4rem;
+	font-size: var(--header-font-size);
+	color: hsl(234, 12%, 34%);
 }
 
 header h1 {
 	font-weight: 200;
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	font-size: 1.5em;
 }
 
-header h1 div {
+header h2 {
+	margin-bottom: 1rem;
 	font-weight: 600;
 }
 
 header p {
-	font-size: 0.938rem;
-	color: hsl(234, 12%, 34%);
+	font-size: 0.938em;
+	color: hsl(229, 6%, 66%);
 	text-shadow: 4px 4px 30px rgba(150, 150, 150, 1);
 }
 
@@ -98,4 +100,32 @@ main section:nth-child(3) {
 
 main section:nth-child(4) {
 	border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: linear-gradient(180deg, #0f006b 35.42%, #181047 70.31%);
+	}
+
+	header {
+		color: white;
+	}
+
+	header h1,
+	header h2 {
+		text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.407);
+	}
+
+	main section p {
+		color: hsl(0, 0%, 81%);
+	}
+
+	main section h2 {
+		color: white;
+		text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.267);
+	}
+
+	main section {
+		background: linear-gradient(180deg, #1d057e 41.67%, #590078 91.67%);
+	}
 }
