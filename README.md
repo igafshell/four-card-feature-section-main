@@ -54,7 +54,7 @@ I learned:
 - How to work with svg and combine it with html & css
 - How to make custom animations
 - How to make a dark and light themes
-- How to make text glow( `text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.407);` )
+- How to make text glow( `text-shadow` )
 
 ### Continued development
 
